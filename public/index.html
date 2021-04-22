@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png">
+  <title>Aid Chat</title>
+</head>
+
+
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('worker.js',{scope: '/'}).then(function (registration) {
+          console.log('Worker registration successful', registration.scope);
+        }, function (err) {
+          console.log('Worker registration failed', err);
+        }).catch(function (err) {
+          console.log(err);
+        });
+      });
+      
+    } else {
+      console.log('Service Worker is not supported by browser.');
+    }
+    //PUSH
+    async function subscribe(){
+      let sw = await navigator.serviceWorker.ready;
+      let push =  await sw.pushManager.subscribe({
+        userVisibleOnly: true,
+        applicationServerKey: 'BC0eDE92338RKYDyfdZvVpgOHRdWvYosUIJKNPv9OQnM2RkEtDt-BR2tZRqDd1GkdQ_8ZxdmO3W-YoDnE0jpFck'
+      })
+      console.log(JSON.stringify('PUSH!!!',push))
+    }
+        //PUSHEND
+  </script>
+</body>
+
+</html>

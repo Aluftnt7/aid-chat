@@ -1,0 +1,8 @@
+.color-pallete-icon {
+    cursor: pointer;
+    width: 30px;
+    margin: 0 5px 0 5px;
+    @include hover-supported{
+        animation: grow-shrink 1s 1 linear;
+    }
+}

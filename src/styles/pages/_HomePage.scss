@@ -1,0 +1,25 @@
+.home-page {
+    .mobile {
+        .user-name{
+            text-transform: capitalize;
+        }
+        @include for-normal-layout {
+            display: none;
+        }
+    }
+    .desktop {
+        @include for-mini-mobile-layout {
+            display: none;
+        }
+        @include for-normal-layout {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .contact-page-desktop{
+            width: 33%;
+        }
+        .room-page-desktop{
+            width: 67%;
+        }
+    }
+}

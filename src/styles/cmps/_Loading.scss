@@ -1,0 +1,12 @@
+.loading-container {
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // height: 90vh;
+  .loading {
+    width: 75%;
+    @include for-normal-layout {
+      width: 50%;
+    }
+  }
+}

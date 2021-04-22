@@ -1,0 +1,22 @@
+.note-list {
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+
+    .spread-view {
+        @include for-mobile-layout {
+            break-inside: avoid-column;
+            column-gap: 2%;
+            column-count: 2;
+        }
+        @include for-narrow-layout {
+            column-count: 3;
+            // column-gap: 4%;
+        }
+        @include for-normal-layout {
+            column-gap: 2%;
+            column-count: 4;
+        }
+    }
+    
+}

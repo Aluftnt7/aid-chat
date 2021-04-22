@@ -1,0 +1,65 @@
+
+    .input-video{
+        background-color:rgba(255, 255, 255, 0.90);
+        position: fixed;
+        max-height: 77vh;
+        width: 100%;
+        bottom: 13%;
+        overflow-y:scroll;
+        max-height: 390px;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        bottom: 22.5%;
+        left: 5%;
+        width: 90%;
+
+        h1{
+            position: fixed;
+            left: 5%;
+            top: 9%;
+            width: 90%;
+            background-color:rgba(255, 255, 255, 0.90);
+        }
+    
+        input {
+            border: 1px solid transparent;
+            border-radius: 5%;
+            height: 60px;
+            font-size: 18px;
+            background-color: $clr-input;
+            width: rem(250px);
+            &.input-header{
+                position: fixed;
+                top: 78%;
+                left: 7.5%;
+                width: 88%;
+            }
+            &.search-input{
+                position: fixed;
+                top: 88%;
+                left: 7.5%;
+                width: 88%;
+            }
+        }
+    
+        
+        .video-card{
+            display: flex;
+            margin-bottom: 5px;
+            padding: 5px;
+            border-bottom: 1px solid lightsteelblue;
+            justify-content: space-between;
+            align-items: center;
+            img{
+                height: 70px;
+                width: auto;
+            }
+
+            .add-button{
+                max-width:30px;
+                cursor: pointer;
+            }
+
+        }
+    }

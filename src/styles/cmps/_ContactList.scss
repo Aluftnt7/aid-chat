@@ -1,0 +1,43 @@
+.contact-list {
+    //change vh to % or something else but relative
+    max-height: 84vh;
+    overflow-y: scroll;
+}
+
+.swipe-container {
+   
+    .delete-btn-container {
+        background-color: #d9534f;
+        box-sizing: border-box;
+        color: white;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 4px 8px;
+        justify-content: flex-end;
+        .swipe-content-left {
+            width: 55px;
+            padding: 0 5px;
+        }
+    }
+    .add-btn-container {
+        background-color: #5cb85c;
+        box-sizing: border-box;
+        color: white;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 4px 8px;
+        // width: 100%;
+        .swipe-content-right {
+            width: 55px;
+            padding: 0 5px;
+        }
+    }
+}
+
+.add-friend-img {
+    width: 2.4rem;
+}

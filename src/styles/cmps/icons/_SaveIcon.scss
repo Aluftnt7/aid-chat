@@ -1,0 +1,12 @@
+.save-icon {
+    cursor: pointer;
+    align-self: flex-end;
+    width: 30px;
+    transition: .3s;
+    animation: grow-shrink .3s 1 linear;
+    @include hover-supported {
+        animation: grow-shrink .3s infinite linear;
+        fill: #2e47fd;
+        stroke: #2e47fd;
+    }
+}
